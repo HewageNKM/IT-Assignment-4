@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider Animation</title>
+    <style>
+        body {
+            background-color: #ffffff
+        }
+
+        main {
+            width: 400px;
+            height: 350px;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        main > section {
+            width: 1600px;
+            height: 300px;
+            display: flex;
+            animation-name: slider-animation;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+
+        }
+
+        main > section > div {
+            width: 500px;
+            height: 350px;
+            border: 3px solid red;
+        }
+
+        main > section > div:nth-child(1) {
+            background-image: url("assests/images/Sri Lanka/slide1.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(2) {
+            background-image: url("assests/images/Sri Lanka/slide2.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(3) {
+            background-image: url("assests/images/Sri Lanka/slide3.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(4) {
+            background-image: url("assests/images/Sri Lanka/slide4.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes slider-animation {
+            0%, 20% {
+                transform: translate(-0%);
+            }
+            25%, 45% {
+                transform: translate(-25%);
+            }
+            50%, 70% {
+                transform: translate(-50%);
+            }
+            75%, 100% {
+                transform: translate(-75%);
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+</body>
+</html>
